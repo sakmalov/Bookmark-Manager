@@ -1,0 +1,37 @@
+<head>
+<style> 
+span {
+    display: inline; 
+    width: 100px;
+    height: 100px;
+    transition: width 1s, height 1s, transform 1s;
+    margin-left: 154px;
+}
+
+button:hover {
+  width: 54px;
+  height: 22px;
+  transform: rotate(360deg);
+}
+div {
+    margin-left: 11px;
+}
+</style>
+</head>
+<body>
+
+<h1> The Bookmark Manager</h1>
+<br>
+<br>
+<form action="/login" method="post">
+<label for="user_name">User Name:</label>
+<input type="text" name="user_name" id="user_name" placeholder="Enter here" autofocus>
+<br>
+<br>
+<div><label for="second_name">Password:</label>
+<input type="password" name="password" id="password" placeholder="Enter here" autofocus></div>
+<br>
+<br>
+<span><button type="submit">Log in</button></span>
+</form>
+</body>
