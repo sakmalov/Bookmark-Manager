@@ -4,7 +4,7 @@ class Bookmark < Sinatra::Base
     enable :sessions
 
     get '/' do
-        erb(:index)
+        'Bookmark Manager'
     end
 
     post '/login' do
@@ -17,8 +17,11 @@ class Bookmark < Sinatra::Base
         erb :profile
     end
     
-    get '/bookmark' do
-        erb :bookmark
+    get '/bookmarks' do
+        p ENV
+
+        @bookmark = Bookmark.all
+        erb :'bookmarks/index'
     end
         
     run! if app_file == $0

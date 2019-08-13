@@ -20,8 +20,9 @@ div {
 </head>
 <body>
 
-<h1> The Bookmark Manager</h1>
+<h1> Bookmark Manager </h1>
 <br>
+
 <br>
 <form action="/login" method="post">
 <label for="user_name">User Name:</label>
@@ -34,4 +35,8 @@ div {
 <br>
 <span><button type="submit">Log in</button></span>
 </form>
-</body>
+<ul>
+  <% @bookmark.each do |bookmark| %>
+    <li><%= bookmark %></li>
+  <% end %>
+</ul>
